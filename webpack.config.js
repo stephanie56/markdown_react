@@ -120,7 +120,6 @@ var config = {
       }
     }),
 
-
     new webpack.NoErrorsPlugin()
 
   ]
