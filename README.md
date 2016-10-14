@@ -58,16 +58,15 @@ In the `webpack.config.js` file,
 we map relative paths to root paths, this means you don't have to do complicated
 folder jumping such as `../../../../file.jpg` to access a file.
 
-Let's say you have a file in `src/media/data/images/github.png`.
+Let's say you have a file in `src/media/images/github.png`.
 
 If you want to
 reference that image in a React component, you just have to use `require('images/github.png')`.
 
-* The folder `src/media/data/images` is automatically mapped to `images/`.
+* The folder `src/media/images` is automatically mapped to `images/`.
+* The folder `src/media/json` is automatically mapped to `json/`
 * The folder `src/components` is automatically mapped to `components/`.
 * The folder `src/stylesheets` is automatically mapped to `stylesheets/`.
-* The folder `src/json` is automatically mapped to `json/`
-
 
 ## Installation Instructions.
 With the command line:
