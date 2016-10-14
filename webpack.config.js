@@ -7,7 +7,7 @@ var path = require('path');
 // Folder paths
 var PATHS = {
   SRC: path.join(__dirname, 'src/'),
-  DEST: path.join(__dirname, 'build/'),
+  DEST: path.join(__dirname, 'dist/'),
   MODULES: path.join(__dirname, 'node_modules/')
 }
 
@@ -23,7 +23,7 @@ var config = {
   // Output directory and filename for bundled JavaScript.
   output: {
     path: PATHS.DEST,
-    publicPath: '/build',
+    publicPath: '/dist',
     filename: 'js/app.js'
   },
 
