@@ -1,5 +1,3 @@
-Want the version which used both Gulp and Webpack? Go to: https://github.com/Jon1701/ReactStarterCode-GulpWebpack
-
 ## What is ReactStarterCode?
 
 ReactStarterCode is a preconfigured project containing all the necessary build tools, modules, and scripts
