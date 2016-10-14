@@ -6,6 +6,6 @@ import ReactDOM from 'react-dom';
 import HelloWorld from 'components/HelloWorld.jsx';
 
 // Add stylesheets.
-require("./stylesheets/stylesheet.scss");
+require("stylesheets/stylesheet.scss");
 
 ReactDOM.render(<HelloWorld/>, document.getElementById('react-target'));
