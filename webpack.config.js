@@ -23,7 +23,6 @@ var config = {
   // Output directory and filename for bundled JavaScript.
   output: {
     path: PATHS.DEST,
-    publicPath: '/dist',
     filename: 'js/app.js'
   },
 
@@ -33,6 +32,10 @@ var config = {
     // Set folders which Webpack can consider to be the application root folder.
     // (Where to find modules).
     root: [PATHS.SRC, PATHS.MODULES],
+
+    // Automatically resolve module extensions for JavScript files.
+    // Can assume imported files are JS or JSX.
+    extensions: ['', '.js', '.jsx'],
 
     // Renames module paths.
     alias: {
@@ -120,7 +123,7 @@ var config = {
       title: 'Application Title', // <title/> tag
       appMountId: 'react-target', // Adds mount point for React apps: <div id="react-target"/>.
       template: require('html-webpack-template'),   // Module to control .html file injection.
-      filename: path.join(PATHS.DEST, '/index.html'), // Path and filename.
+      filename: 'index.html' // File name.
     }),
 
     // Switch React to Production Mode.
