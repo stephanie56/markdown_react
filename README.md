@@ -89,7 +89,7 @@ With the command line:
 
 5. Open the project in your web browser.
 
-    `http://localhost:8080/dist`
+    `http://localhost:8080`
 
 ## Build/Production environment commands.
 
