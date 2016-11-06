@@ -1,15 +1,24 @@
 import React from 'react';
+
+import MarkDown from 'components/MarkDown.jsx' 
 export default class InputBox extends React.Component {
+  constructor(){
+    super()
+    this.state={
+      text:"default state"
+    }
+  }
 
   handleChange(e){
-    console.log(e.target.value)
+    var newState = {text: e.target.value}
+    this.setState(newState)
   }
 
   render(){
     return(
-      <div>
+      <div className="inputbox">
         <textarea onChange={this.handleChange.bind(this)}/>
-
+        <MarkDown text={this.state.text} />
       </div>
 
     )

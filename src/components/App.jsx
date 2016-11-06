@@ -4,12 +4,12 @@ import InputBox from 'components/InputBox.jsx'
 import MarkDown from 'components/MarkDown.jsx'
 
 export default class App extends React.Component {
+
   render() {
 
     return (
-      <div>
+      <div className="container">
         <InputBox />
-        <MarkDown />
       </div>
     )
   }
