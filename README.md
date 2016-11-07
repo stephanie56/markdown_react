@@ -22,4 +22,5 @@ What InputBox pane does:
 
 What MarkDown pane does:
 - get this.props.text from parent App pane
-- output: dangerlyinnerhtml = marked(this.props.text)
+- function handleMarkdown() that handles rawMarkup marked(text)
+- output: dangerouslySetInnerHTML = this.handleMarkdown(this.props.text)
