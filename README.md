@@ -3,24 +3,23 @@
 Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/FreeCodeCamp/full/JXrLLE/.
 
 App pane include
-- input pane
-- output pane
+- InputBox pane
+- MarkDown pane
 
-What app pane does:
-1. import input and output pane
-2. initiate state for the whole app. Empty string {content: ""}
-3. Function updateparentstate(newcontent) return this.setstate() that use new content from input pane to update parent state
-4. Pass updateparentstate() function to input pane
-5. Pass this.state.content to output pane
+What App pane does:
+- Import InputBox and MarkDown pane
+- Initiate state for the whole app. Empty object  {text: ""}
+- Function handleUpdateState(newText) return this.setstate() that takes newText from InputBox  pane to update parent state
+- Pass handleUpdateState() function as a prop updateParentState() to InputBox pane
+- Pass this.state.text as a prop text to MarkDown  pane
 
-Input pane include:
-- textarea (onchange event trigger handlechange function)
-- function handlechange() take event argument and return event target value
-- handlechange(e){ var newcontent = e.target.value}
+What InputBox pane does:
+- textarea (onChange event triggers handleChange() function)
+- function handleChange() take event argument and pass event target value to prop this.props.updateParentState() function
+- handleChange(e){
+  this.props.updateParentState(e.target.value)
+}
 
-What input pane does:
-- this.props.updateparentstate(newcontent)
-
-What output pane does:
-- input: this.props.content from parent pane
-- output: dangerlyinnerhtml = marked(this.props.content)
+What MarkDown pane does:
+- get this.props.text from parent App pane
+- output: dangerlyinnerhtml = marked(this.props.text)

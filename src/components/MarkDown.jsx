@@ -1,16 +1,16 @@
 import React from 'react';
+import marked from 'marked';
 
 export default class MarkDown extends React.Component {
-
- var marked = require('marked')
- handleMarkdown(){
- marked()
+ handleMarkdown(text){
+   var rawMarkup = marked(text)
+   return { __html: rawMarkup}
  }
 
   render(){
     return(
       <div className="markdown">
-        <div>{this.props.text}</div>
+        <div dangerouslySetInnerHTML={this.handleMarkdown(this.props.text)} />
       </div>
 
     )

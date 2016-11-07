@@ -12,11 +12,12 @@ export default class App extends React.Component {
   }
 
   handleUpdateState(newText){
-    this.setState({text: newText})
+    this.setState(
+      {text: newText}
+    )
   }
 
   render() {
-
     return (
       <div className="container">
         <InputBox updateParentState = {this.handleUpdateState.bind(this)} />
