@@ -2,6 +2,7 @@ import React from 'react';
 import marked from 'marked';
 
 export default class MarkDown extends React.Component {
+
  handleMarkdown(text){
    var rawMarkup = marked(text)
    return {__html: rawMarkup}
@@ -9,9 +10,7 @@ export default class MarkDown extends React.Component {
 
   render(){
     return(
-      <div className="markdown">
         <div dangerouslySetInnerHTML={this.handleMarkdown(this.props.text)} />
-      </div>
 
     )
 
