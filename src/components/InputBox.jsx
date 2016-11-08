@@ -8,8 +8,9 @@ export default class InputBox extends React.Component {
 
   render()
   {
-    return(<div className="inputbox">
-        <textarea onChange={this.handleChange.bind(this)}/>
+    return(
+      <div className="inputbox">
+        <textarea rows="30" className ="inputpane" onChange={this.handleChange.bind(this)}/>
       </div>)
   }
 

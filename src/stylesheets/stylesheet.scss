@@ -5,21 +5,25 @@ body {
 
 a {
   color: inherit;
-  font-weight: bold;
   text-decoration: none;
-  background-color: #F5F5F5;
 }
 
-/* tempt css */
-.container {
-  border:2px solid red;
-  padding:10px;
+.container{
+  padding:30px;
 }
 
 .inputbox {
-  border:2px green solid;
+  width:50%;
+  float:left;
+}
+
+.inputpane {
+  overflow-y:scroll;
+  width:80%;
+  height:auto;
 }
 
 .markdown {
-  border:2px yellow solid;
+  width:50%;
+  float:left;
 }
